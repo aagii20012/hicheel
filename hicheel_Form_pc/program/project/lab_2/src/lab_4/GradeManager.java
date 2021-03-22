@@ -18,10 +18,7 @@ public class GradeManager {
 	 * Creates a new GradeManager.
 	 */
 	public GradeManager() {
-		// Create a new HashMap of the grades
 		this.allGrades = new HashMap<Integer,LetterGrade>();
-		
-		//bagshaa ta oroi baih uu gertee ochood suurin com deerhee uzuulii
 	}
 		
 	/**
@@ -30,7 +27,6 @@ public class GradeManager {
 	 */
 	public void addGrade(String grade) throws InvalidGradeException {
 				
-				try{  
 					if (grade.equals("a")) {
 						allGrades.put(size,LetterGrade.A);
 						size++;
@@ -46,7 +42,8 @@ public class GradeManager {
 					} 	else if (grade.equals("f")) {
 						allGrades.put(size,LetterGrade.F);
 						size++;
-					} else throw new InvalidGradeException(grade);
+					}else throw new InvalidGradeException(
+					          "Incorrect grade : " + grade);
 					 
 	}
 
@@ -58,7 +55,7 @@ public class GradeManager {
 		// TODO: YOUR CODE HERE
 		String sb =getHistString();
 		System.out.println(sb);
-		throw new RuntimeException("GradeManger.printHistogram() not yet implemented!");
+		//throw new RuntimeException("GradeManger.printHistogram() not yet implemented!");
 	}
 	
 	/**
@@ -67,9 +64,12 @@ public class GradeManager {
 	 */
 	public String getHistString() {
 		StringBuffer sb = new StringBuffer();
-		for (int i = 0; i < this.allGrades.get(gl); i++) {
-			sb.append("*");
-		}
+		allGrades.forEach((key, value) -> {
+			sb.append("\n"+value);
+		 });
+		//for (int i = 0; i < size; i++) {
+		//	sb.append("*");
+		//}
 		sb.append("\n");
 		return sb.toString();
 	}
