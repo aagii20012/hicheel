@@ -1,4 +1,3 @@
-package lab_2;
 
 public enum TokenType {
      Bool, Char, Else, False, Float,
