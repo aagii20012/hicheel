@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="ps3/src"/>
+	<classpathentry kind="src" path="ps3/test"/>
+	<classpathentry kind="lib" path="__MACOSX/ps3/lib/._antlr.jar"/>
+	<classpathentry kind="lib" path="ps3/lib/antlr.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
